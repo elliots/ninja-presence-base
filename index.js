@@ -28,6 +28,9 @@ function Driver(opts,app) {
     }
     self.emit('register', self);
     self.save();
+    if (self.init) {
+      self.init();
+    }
     self.startScanning();
   });
 
