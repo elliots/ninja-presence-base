@@ -57,7 +57,7 @@ Driver.prototype.see = function(entity) {
   }
 
   self._timeouts[entity.id] = setTimeout(function() {
-      entity.present = data['new'] = false;
+      entity.present = entity['new'] = false;
       self.emit('data', entity);
       delete(self._timeouts[entity.id]);
   }, this._opts.timeout);
