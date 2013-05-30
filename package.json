@@ -10,7 +10,6 @@
   "author": "Elliot Shepherd",
   "license": "MIT",
   "dependencies": {
-    "wifi_location": "latest",
     "underscore": "~1.4.4"
   }
 }
