@@ -17,7 +17,7 @@ function Driver(opts,app) {
   this._app = app;
 
   opts.timeout = opts.timeout || 1000 * 60 ;
-  opts.scanInterval = opts.scanInterval || 5000;
+  opts.scanDelay = opts.scanDelay || 10000;
 
   this._timeouts = {};
   opts.lastValue = opts.LastValue || {};
