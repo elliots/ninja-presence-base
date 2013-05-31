@@ -55,13 +55,13 @@ Driver.prototype.see = function(entity) {
   }
 
   if (!_.isEqual(this._opts.lastValue[entity.id], entity)) {
-    self.emit('data', entity);
+    self.emit('data', entity.id + (entity['new']?'-appeared':'-here'));
     this._opts.lastValue[entity.id] = entity;
   }
 
   self._timeouts[entity.id] = setTimeout(function() {
       entity.present = entity['new'] = false;
-      self.emit('data', entity);
+      self.emit('data', entity.id + '-gone');
       delete(self._timeouts[entity.id]);
   }, this._opts.timeout);
 };
