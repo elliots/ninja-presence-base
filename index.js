@@ -27,7 +27,9 @@ function Driver(opts,app) {
       throw 'You must set "G" when creating a presence driver.';
     }
     self.emit('register', self);
-    self.save();
+    if (self.save() {
+      self.save(); // May not be there in the test harness
+    }
     if (self.init) {
       self.init();
     }
