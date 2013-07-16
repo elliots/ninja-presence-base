@@ -70,9 +70,4 @@ Driver.prototype.see = function(entity) {
   }, this._opts.timeout);
 };
 
-Driver.prototype.scan = function() {
-  throw 'The "scan" method needs to be overridden when creating a presence driver';
-};
-
-
 module.exports = Driver;
