@@ -33,7 +33,9 @@ function Driver(opts,app) {
     if (self.init) {
       self.init();
     }
-    self.startScanning();
+    if (self.scan) {
+      self.startScanning();
+    }
   });
 
 }
