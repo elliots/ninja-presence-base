@@ -10,8 +10,6 @@ function Driver(opts,app) {
 
   this.writeable = false;
   this.readable = true;
-  this.V = 0;
-  this.D = 14;
 
   this._opts = opts;
   this._app = app;
@@ -24,7 +22,13 @@ function Driver(opts,app) {
 
   app.on('client::up',function(){
     if (!self.G) {
-      throw 'You must set "G" when creating a presence driver.';
+      throw new Error('You must set "G" when creating a presence driver.');
+    }
+    if (self.V === undefined) {
+      throw new Error('You must set "V" when creating a presence driver.');
+    }
+    if (self.D == undefined) {
+      throw new Error('You must set "D" when creating a presence driver.');
     }
     self.emit('register', self);
     if (self.save) {
