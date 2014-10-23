@@ -1,15 +1,27 @@
 {
   "name": "ninja-presence-base",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A base for NinjaBlocks presence drivers to extend",
   "main": "index.js",
+  "bugs":"https://github.com/elliots/ninja-presence-base/issues",
+  "homepage":"https://github.com/elliots/ninja-presence-base",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+
   "author": "Elliot Shepherd",
+  "contributors":[
+    {
+      "name": "Stephan van Rooij",
+      "url": "https://svrooij.nl"
+    }
+  ]
   "license": "MIT",
   "dependencies": {
     "underscore": "~1.4.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svrooij/ninja-presence-base.git"
+  },
 }
